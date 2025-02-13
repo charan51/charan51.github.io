@@ -1,208 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Charan Raj | Portfolio</title>
-  <!-- Google Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charan Raj | Resume</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
-    /* Reset and basic styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Global Styles */
     body {
+      margin: 0;
       font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
+      background: #f5f5f5;
       color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    /* Container and layout */
-    .container {
       display: flex;
       min-height: 100vh;
     }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Sidebar Styles */
     .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
       background: #2c3e50;
       color: #fff;
-      padding: 40px;
-      width: 300px;
+      padding: 20px;
+      overflow-y: auto;
     }
     .sidebar h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .sidebar p,
-    .sidebar a {
+      font-size: 24px;
       margin-bottom: 10px;
-      color: #fff;
     }
-    .sidebar hr {
-      border: 1px solid rgba(255,255,255,0.2);
-      margin: 20px 0;
+    .sidebar .contact-info p {
+      margin: 8px 0;
+      font-size: 14px;
     }
-    .main {
-      flex: 1;
-      background: #fff;
+    .sidebar nav {
+      margin-top: 30px;
+    }
+    .sidebar nav a {
+      display: block;
+      margin: 12px 0;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .sidebar nav a:hover {
+      color: #e74c3c;
+    }
+    /* Main Content Styles */
+    .main-content {
+      margin-left: 320px;
       padding: 40px;
+      flex: 1;
     }
-    /* Section styles */
-    .section {
-      margin-bottom: 40px;
+    section {
+      margin-bottom: 60px;
     }
-    .section h2 {
+    section h2 {
+      font-size: 28px;
       border-bottom: 2px solid #e74c3c;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
     .education-item,
-    .job,
-    .project {
+    .experience-item,
+    .project-item {
       margin-bottom: 20px;
     }
-    .education-item h3,
-    .job h3,
-    .project h3 {
-      font-size: 20px;
-      margin-bottom: 5px;
-    }
-    .job-company {
-      font-style: italic;
-    }
     .date {
-      font-size: 14px;
       color: #999;
-      margin-bottom: 10px;
+      font-size: 14px;
     }
     ul {
-      list-style: disc inside;
-      margin-left: 20px;
+      margin: 10px 0 0 20px;
+      padding: 0;
+      list-style-type: disc;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
-    /* Responsive design */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
       .sidebar {
+        position: relative;
         width: 100%;
+        height: auto;
+      }
+      .main-content {
+        margin-left: 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar with basic info and skills -->
-    <div class="sidebar">
-      <h1>Charan Raj</h1>
+  <!-- Sidebar with Profile and Navigation -->
+  <div class="sidebar">
+    <h1>Charan Raj</h1>
+    <div class="contact-info">
       <p>Worcester, MA</p>
       <p>508-502-8018</p>
       <p><a href="mailto:CharRaj@clarku.edu">CharRaj@clarku.edu</a></p>
       <p><a href="https://www.linkedin.com/in/cvcharanraj/" target="_blank">linkedin.com/in/cvcharanraj</a></p>
-      <hr>
-      <h3>Skills</h3>
-      <p>Java, Node.js, Spring Boot</p>
-      <p>SQL, React, React Native</p>
-      <p>JavaScript (ES6+), HTML5, CSS3, Tailwind CSS</p>
     </div>
-    <!-- Main content area with resume details -->
-    <div class="main">
-      <!-- Education Section -->
-      <div class="section" id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-          <h3>Master of Science in Computer Science (STEM)</h3>
-          <p>Clark University, Worcester, MA</p>
-          <p class="date">Expected Dec 2025</p>
-        </div>
-        <div class="education-item">
-          <h3>Bachelor of Computer Application</h3>
-          <p>MS Ramaiah College, Bangalore, India</p>
-          <p class="date">May 2014</p>
-        </div>
+    <nav>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </div>
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Master of Science in Computer Science (STEM)</h3>
+        <p>Clark University, Worcester, MA</p>
+        <p class="date">Expected Dec 2025</p>
       </div>
-      <!-- Experience Section -->
-      <div class="section" id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-          <h3>Lead Software Engineer</h3>
-          <p class="job-company">HCL, Bangalore, IN</p>
-          <p class="date">May 2022 - Jan 2024</p>
-          <ul>
-            <li>Implemented AWS DynamoDB for a serverless data storage solution, coupled with S3 for data archival and analysis using AWS Lambda.</li>
-            <li>Improved the system’s capacity to handle large-scale customer data, enabling better real-time analytics.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Senior Software Engineer</h3>
-          <p class="job-company">IBM, Bangalore, IN</p>
-          <p class="date">May 2019 - May 2022</p>
-          <ul>
-            <li>Led the migration to a modern React-based front-end with a Node.js backend, integrating OAuth2.0 for secure authentication and utilizing AWS Lambda for scalable back-end processing.</li>
-            <li>Enhanced portal security and improved user experience with a more responsive design.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Senior Software Engineer</h3>
-          <p class="job-company">Cognizant, Bangalore, IN</p>
-          <p class="date">May 2019 - Mar 2022</p>
-          <ul>
-            <li>Developed a scalable media-streaming web application using React and Node.js, integrated AWS S3 and CloudFront for optimized content delivery.</li>
-            <li>Streamlined the media delivery process and reduced load times significantly during peak traffic hours.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Web Developer</h3>
-          <p class="job-company">Thomson Reuters, Bangalore, IN</p>
-          <p class="date">Dec 2015 - May 2017</p>
-          <ul>
-            <li>Optimized the application’s back-end by switching to a microservices architecture using Docker and Kubernetes.</li>
-            <li>Improved performance and scalability to handle a larger volume of requests.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Web Developer</h3>
-          <p class="job-company">Infosys, Bangalore, IN</p>
-          <p class="date">July 2014 - Dec 2015</p>
-          <ul>
-            <li>Developed mobile-responsive versions of client websites using HTML5, CSS3, and JavaScript.</li>
-            <li>Improved user engagement by ensuring seamless browsing across devices.</li>
-          </ul>
-        </div>
+      <div class="education-item">
+        <h3>Bachelor of Computer Application</h3>
+        <p>MS Ramaiah College, Bangalore, India</p>
+        <p class="date">May 2014</p>
       </div>
-      <!-- Projects Section -->
-      <div class="section" id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>Smart Inventory Management System</h3>
-          <p>Full-Stack Developer | Node.js, React, PostgreSQL, AWS</p>
-          <ul>
-            <li>Developed a full-stack inventory management application to streamline product tracking, stock alerts, and supplier management.</li>
-            <li>Built RESTful APIs using Node.js and designed responsive user interfaces with React.</li>
-            <li>Integrated PostgreSQL and AWS RDS for scalable cloud storage.</li>
-          </ul>
-          <p><a href="https://github.com/charan51/Smart-Warehouse-Backend" target="_blank">View on GitHub</a></p>
-        </div>
-        <div class="project">
-          <h3>TrimX - URL Shortener</h3>
-          <p>Backend Developer | Java, Spring Boot, Docker, AWS & React</p>
-          <ul>
-            <li>Developed backend services using Java and Spring Boot for secure and scalable link management.</li>
-            <li>Containerized the application using Docker and deployed on AWS.</li>
-            <li>Implemented click tracking and analytics features to improve processing efficiency by 25%.</li>
-          </ul>
-          <p><a href="https://github.com/charan51/trimx" target="_blank">View on GitHub</a></p>
-        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Relevant Skills</h2>
+      <p>Technical Skills: Proficient in Java, Node.js, Spring Boot, cloud technologies, and Agile methodologies.</p>
+      <p>Front-end: SQL, React, React Native, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS.</p>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Lead Software Engineer</h3>
+        <p>HCL, Bangalore, IN</p>
+        <p class="date">May 2022 - Jan 2024</p>
+        <ul>
+          <li>Implemented AWS DynamoDB for a serverless data storage solution, coupled with S3 for archival and analysis using AWS Lambda.</li>
+          <li>Improved the system’s capacity to handle large-scale customer data, enabling real-time analytics.</li>
+        </ul>
       </div>
-    </div>
+      <div class="experience-item">
+        <h3>Senior Software Engineer</h3>
+        <p>IBM, Bangalore, IN</p>
+        <p class="date">May 2019 - May 2022</p>
+        <ul>
+          <li>Led migration to a modern React-based front-end with a Node.js backend, integrating OAuth2.0 for secure authentication and utilizing AWS Lambda for scalable back-end processing.</li>
+          <li>Enhanced portal security and improved user experience with a responsive design.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Senior Software Engineer</h3>
+        <p>Cognizant, Bangalore, IN</p>
+        <p class="date">May 2019 - Mar 2022</p>
+        <ul>
+          <li>Developed a scalable media-streaming web application using React and Node.js, integrated with AWS S3 and CloudFront for optimized content delivery.</li>
+          <li>Streamlined media delivery, reducing load times during peak traffic hours.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Web Developer</h3>
+        <p>Thomson Reuters, Bangalore, IN</p>
+        <p class="date">Dec 2015 - May 2017</p>
+        <ul>
+          <li>Optimized the back-end by switching to a microservices architecture using Docker and Kubernetes.</li>
+          <li>Improved performance and scalability to handle higher volumes of requests.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Web Developer</h3>
+        <p>Infosys, Bangalore, IN</p>
+        <p class="date">July 2014 - Dec 2015</p>
+        <ul>
+          <li>Developed mobile-responsive versions of client websites using HTML5, CSS3, and JavaScript.</li>
+          <li>Enhanced user engagement by ensuring seamless browsing across devices.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <h3>Smart Inventory Management System</h3>
+        <p>Full-Stack Developer | Node.js, React, PostgreSQL, AWS</p>
+        <ul>
+          <li>Developed an inventory management application to streamline product tracking, stock alerts, and supplier management.</li>
+          <li>Built RESTful APIs using Node.js and designed responsive user interfaces with React.</li>
+          <li>Integrated PostgreSQL and AWS RDS for scalable cloud storage.</li>
+        </ul>
+        <p><a href="https://github.com/charan51/Smart-Warehouse-Backend" target="_blank">View on GitHub</a></p>
+      </div>
+      <div class="project-item">
+        <h3>TrimX - URL Shortener</h3>
+        <p>Backend Developer | Java, Spring Boot, Docker, AWS & React</p>
+        <ul>
+          <li>Developed backend services using Java and Spring Boot for secure and scalable link management.</li>
+          <li>Containerized the application using Docker and deployed on AWS.</li>
+          <li>Implemented click tracking and analytics to enhance processing efficiency.</li>
+        </ul>
+        <p><a href="https://github.com/charan51/trimx" target="_blank">View on GitHub</a></p>
+      </div>
+    </section>
   </div>
 </body>
 </html>
